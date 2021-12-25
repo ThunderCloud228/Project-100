@@ -1,22 +1,24 @@
 class Atm(object):
-    def __init__(self, cardNumber, pinNumber):
-        self.cardNumber=cardNumber
-        self.pinNumber=pinNumber
+    def __init__(self):
+        cardNumber = int(input("Enter your card number here: "))
+        pinNumber = int(input("Enter your pin number here: "))
 
-    def cashWithdrawl(self, amount):
+    def cashWithdrawl(self):
+        amount = int(input("Enter the amount of cash you want to withdraw: "))
         print("Successfully withdrew", amount, "cash")
 
-    def cashDeposit(self, amount):
-        print("Successfully deposited", amount, "cash")
+    def cashDeposit(self):
+        amount1 = int(input("Enter the amount of cash you want to deposit: "))
+        print("Successfully deposited", amount1, "cash")
 
     def balanceEnquiry(self):
         print("This is your bank balance")
 
 
-Arush = Atm("007", "1010")
+Arush = Atm()
 
 print(Arush)
-print(Arush.cashWithdrawl("6969"))
-print(Arush.cashDeposit("696969"))
+print(Arush.cashWithdrawl())
+print(Arush.cashDeposit())
 print(Arush.balanceEnquiry())
 
